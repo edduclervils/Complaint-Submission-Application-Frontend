@@ -1,7 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useQuery, useQueryClient } from "react-query";
-import { Link } from "react-router-dom";
-import { Complaint, ComplaintInput, getComplaintsByMeetingId, Priority, Status, updateComplaint } from "../../api/complaint-request";
+import { Complaint, ComplaintInput, Priority, Status, updateComplaint } from "../../api/complaint-request";
 import { getAllMeetings } from "../../api/meeting-request";
 import { styleContext } from "../../App";
 import { revertAndFormatTime } from "./revert-and-format-time";

@@ -13,7 +13,6 @@ import { ReviewComplaintsPage } from './components/pages/review-complaints-page'
 import { MeetingsListPage } from './components/pages/meetings-page';
 import { NavBar } from './navigation/nav-bar';
 import { AboutCouncil } from './components/pages/about-council-page';
-import radar from './DBRadar.png'
 import './styles.css'
 import './fonts/Saiyan-Sans.ttf'
 import './fonts/Saiyan-Sans-Left-Oblique.ttf'

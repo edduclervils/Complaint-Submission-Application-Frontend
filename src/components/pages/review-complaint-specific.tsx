@@ -1,8 +1,7 @@
-import { useContext } from "react";
+
 import { useQuery, useQueryClient } from "react-query";
 import { useParams } from "react-router-dom";
-import { Complaint, getComplaintById } from "../../api/complaint-request"
-import { styleContext } from "../../App";
+import { getComplaintById } from "../../api/complaint-request"
 import { ReviewComplaints } from "../componentParts/complaint-review";
 
 
