@@ -1,8 +1,7 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useQuery, useQueryClient } from "react-query";
 import { Complaint, ComplaintInput, Priority, Status, updateComplaint } from "../../api/complaint-request";
 import { getAllMeetings } from "../../api/meeting-request";
-import { styleContext } from "../../App";
 import { revertAndFormatTime } from "./revert-and-format-time";
 import radar from './../../DBRadar.png'
 
@@ -15,7 +14,6 @@ type ComplaintProps ={
 }
 
 export function ReviewComplaints(props: ComplaintProps){
-    const {style} = useContext(styleContext);
     const queryClient = useQueryClient();
     const[form,setForm] = useState<Complaint>({complaintId: props.complaintId, description:props.description, status:props.status, priority:props.priority, meetingId:props.meetingId});
 
@@ -84,7 +82,7 @@ export function ReviewComplaints(props: ComplaintProps){
                 <div>
                     <select name="meetingList" id="meetingList" onChange={handleSetMeeting} >
                         <option value={0}>Select A Meeting</option>
-                        {data.map(m =><option value={m.meetingId} selected={m.meetingId == form.meetingId ? true : false}>Meeting #{m.meetingId}: {revertAndFormatTime(m.time)}</option>)}
+                        {data.map(m =><option key={m.meetingId} value={m.meetingId} selected={m.meetingId == form.meetingId ? true : false}>Meeting #{m.meetingId}: {revertAndFormatTime(m.time)}</option>)}
                     </select>
                 </div>
                 <div><button onClick={handleUpdateComplaint}>Complete Changes</button></div>

@@ -54,7 +54,6 @@ export async function verifyUser(login:LoginForm):Promise<AppUserReturnInfo | Fa
 export async function getAllUsers():Promise<AppUserReturnInfo[]>{
     const httpResponse = await fetch("http://127.0.0.1:8080/user");
     const returnUser:AppUserReturnInfo[] = await httpResponse.json();
-    console.log(returnUser);
     return returnUser;
 }
 

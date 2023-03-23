@@ -32,7 +32,3 @@ export function UpcomingMeetingsList(){
         </div>
     </>
 }
-
-// Code from potluck that filtered by username to populate. code can be formatted to filter by date for finding previous/upcoming meetings
-/*{data.filter(meet => potlukk.host.username.includes(props.username)).map(p => 
-            <li key={Math.random()}><Link to={`/potluckinfohost/${p.potlukkId}`}>{p.details.title}</Link></li> )} */

@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { getAllUsernames, verifyUser } from "../../api/appUser-request";
-import { styleContext } from "../../App";
+
 
 export type LogInForm ={
     username: string
@@ -9,7 +9,6 @@ export type LogInForm ={
 }
 
 export function LogInPage(){
-    const {style} = useContext(styleContext);
     const navigation = useNavigate();
     const[form,setForm] = useState<LogInForm>({username:"", password:""});
 

@@ -22,7 +22,7 @@ export function CreateMeeting(){
     }
 
     async function handleMeetingCreation(){
-        let returnedMeeting = await createMeeting(form);
+        await createMeeting(form);
         setVisible(true);
         setTimeout(()=>{
             navigation("/")

@@ -33,8 +33,6 @@ export function MeetingInfo(props: MeetingIdProps){
         return <p>OH NO THERE WAS A PROBLEM</p>
     }
 
-//    console.log(data);
-
     return <>
         {councilVisible ? <li><Link to="/meetings/create">Click here to create a new meeting</Link></li> :<></>}
         <fieldset>

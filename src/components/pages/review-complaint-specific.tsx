@@ -24,8 +24,6 @@ export function ReviewComplaintSpecific(){
         return <p>OH NO THERE WAS A PROBLEM</p>
     }
 
-   // let complaintInfo: Complaint = await getComplaintById(Number(complaintId)); 
-
     return <>
         <h1>Review Specific Complaint</h1>
         {data!== undefined ? <ReviewComplaints complaintId={data.complaintId} description={data.description} status={data.status} priority={data.priority} meetingId={data.meetingId}/> : <p>Something Went Wrong</p>}

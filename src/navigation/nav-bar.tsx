@@ -1,11 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import {styleContext} from "../App"
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export function NavBar(){
-    const navigation = useNavigate();
 
-    const {setGlobalStyle} = useContext(styleContext);
+
     const [isVisible,setVisible] = useState<boolean>(false);
     useEffect(()=>{
         const userCheck = localStorage.getItem("userid");

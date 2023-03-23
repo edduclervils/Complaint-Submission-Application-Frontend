@@ -41,8 +41,6 @@ export function ComplaintsToBeAddressed(props: MeetingIdProps){
         
     }
 
-    //console.log(data.length);
-
     return <>
     {isVisible ?
     <fieldset>

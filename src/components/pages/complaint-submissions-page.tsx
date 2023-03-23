@@ -8,7 +8,7 @@ export function ComplaintSubmissions(){
 
 
     async function handleSubmitComplaint(){
-        const returnedComplaint: Complaint = await addAComplaint(form);
+        await addAComplaint(form);
         setVisible(true);
         setTimeout(()=>{
             setVisible(false);
