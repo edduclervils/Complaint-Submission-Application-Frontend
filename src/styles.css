@@ -1,0 +1,17 @@
+body {
+    background-color: blanchedalmond;
+    background-image: url("./KamiLookout.jpg");
+    background-repeat: repeat-y;
+    background-position: fixed;
+    background-size: 100% auto;
+}
+
+@font-face {
+    font-family: "DBZ";
+    src: local("Saiyan-Sans"),
+      url("./fonts/Saiyan-Sans.ttf") format("truetype");
+  } 
+
+  h1, h2, p {
+    text-align: center;
+}
