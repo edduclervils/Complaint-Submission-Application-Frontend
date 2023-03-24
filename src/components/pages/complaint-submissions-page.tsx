@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ComplaintInput, Priority, Status, Complaint, addAComplaint } from "../../api/complaint-request";
+import { ComplaintInput, Priority, Status, addAComplaint } from "../../api/complaint-request";
 
 
 export function ComplaintSubmissions(){

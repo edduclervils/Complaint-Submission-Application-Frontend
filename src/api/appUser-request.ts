@@ -36,10 +36,10 @@ export type Username = {
     username: string
 }
 
-
+const url = "http://127.0.0.1:8080/";
 
 export async function verifyUser(login:LoginForm):Promise<AppUserReturnInfo | FailedLoginReturn>{
-    const httpResponse = await fetch("http://127.0.0.1:8080/login", {
+    const httpResponse = await fetch(url+"login", {
         method: "PATCH",
         body:JSON.stringify(login),
         headers:{
@@ -52,13 +52,13 @@ export async function verifyUser(login:LoginForm):Promise<AppUserReturnInfo | Fa
 }
 
 export async function getAllUsers():Promise<AppUserReturnInfo[]>{
-    const httpResponse = await fetch("http://127.0.0.1:8080/user");
+    const httpResponse = await fetch(url+"user");
     const returnUser:AppUserReturnInfo[] = await httpResponse.json();
     return returnUser;
 }
 
 export async function getAllUsernames():Promise<Username[]>{
-    const httpResponse = await fetch("http://127.0.0.1:8080/user");
+    const httpResponse = await fetch(url+"user");
     const returnUser:Username[] = await httpResponse.json();
     return returnUser;
 }

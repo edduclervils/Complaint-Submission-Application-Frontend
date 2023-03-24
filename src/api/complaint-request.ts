@@ -24,29 +24,31 @@ export enum Status {
     ADDRESSED = "ADDRESSED"
 }
 
+const url = "http://127.0.0.1:8080/";
+
 export async function getAllComplaints():Promise<Complaint[]>{
 
-    const httpResponse = await fetch("http://127.0.0.1:8080/complaints");
+    const httpResponse = await fetch(url+"complaints");
     const allComplaints: Complaint[] = await httpResponse.json();
     return allComplaints;
 }
 
 export async function getComplaintById(complaintId: number):Promise<Complaint>{
 
-    const httpResponse = await fetch("http://127.0.0.1:8080/complaints/"+complaintId);
+    const httpResponse = await fetch(url+"complaints/"+complaintId);
     const allComplaints: Complaint = await httpResponse.json();
     return allComplaints;
 }
 
 export async function getComplaintsByMeetingId(meetingId: number):Promise<Complaint[]>{
 
-    const httpResponse = await fetch("http://127.0.0.1:8080/complaints/meeting/"+meetingId);
+    const httpResponse = await fetch(url+"complaints/meeting/"+meetingId);
     const allComplaints: Complaint[] = await httpResponse.json();
     return allComplaints;
 }
 
 export async function addAComplaint(newComplaint:ComplaintInput):Promise<Complaint>{
-    const httpResponse = await fetch("http://127.0.0.1:8080/complaints", {
+    const httpResponse = await fetch(url+"complaints", {
         method: "POST",
         body:JSON.stringify(newComplaint),
         headers:{
@@ -59,7 +61,7 @@ export async function addAComplaint(newComplaint:ComplaintInput):Promise<Complai
 }
 
 export async function updateComplaint(complaintId:number,changedComplaint:ComplaintInput):Promise<Complaint>{
-    const httpResponse = await fetch("http://127.0.0.1:8080/complaints/"+complaintId, {
+    const httpResponse = await fetch(url+"complaints/"+complaintId, {
         method: "PUT",
         body:JSON.stringify(changedComplaint),
         headers:{
